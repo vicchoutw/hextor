@@ -68,13 +68,13 @@
       "output": "export"
     },
     "mac": {
-      "icon": "hextor.png"
+      "icon": "logo/hextor.png"
     },
     "win": {
-      "icon": "hextor.png"
+      "icon": "logo/hextor.png"
     },
     "linux": {
-      "icon": "hextor.png"
+      "icon": "logo/hextor.png"
     }
   }
 }

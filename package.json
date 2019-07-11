@@ -6,10 +6,10 @@
   "scripts": {
     "app": "npm run build && electron .",
     "pack": "npm run build && electron-builder --dir",
-    "export": "npm run build && electron-builder --win --mac",
-    "export-w": "npm run build && electron-builder --win",
-    "export-m": "npm run build && electron-builder --mac",
-    "export-l": "npm run build && electron-builder --linux",
+    "create": "npm run build && electron-builder --win --mac",
+    "create-w": "npm run build && electron-builder --win",
+    "create-m": "npm run build && electron-builder --mac",
+    "create-l": "npm run build && electron-builder --linux",
     "dev": "webpack-dev-server --devtool eval-source-map --progress --colors --inline --hot --mode=development",
     "build": "webpack --mode=production"
   },

@@ -26,7 +26,11 @@ Then install node_modules.
   npm install
 ```
 </br>
+
 ### Usage
+
+</br>
+
 ##### Web development
 ```javascript
   npm run dev

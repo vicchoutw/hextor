@@ -118,7 +118,7 @@ class BaseComponent extends React.Component {
     for (let i = 0; i < $colors.length; i = i + 1) {
       _default.colorTween.colors.push(`#${$colors[i].value}`);
     }
-    console.log('ColorArray: ', _default.colorTween.colors);
+    // console.log('ColorArray: ', _default.colorTween.colors);
   }
 
   // Generate results on click events
@@ -128,22 +128,17 @@ class BaseComponent extends React.Component {
 
     this.setState({ genActive: 'active'});
 
-    // const mask = document.getElementById('mask');
     const colorbar = document.getElementById('colorbar');
     const copy = document.getElementById('copy');
-    // const result = document.getElementById('content');
 
     setTimeout(() => {
       let text = JSON.stringify(colorArray).replace(/[^{0-9}{a-z}#,]/g, "");
-      // mask.style.display = 'block';
       this.setState({ 
         maskShow: {display: 'block'},
         resultValue: text
       });
 
       colorbar.style.background = `linear-gradient(to right, ${text})`;
-      
-      // result.innerHTML = text;
       copy.setAttribute('data-clipboard-text', text);
     }, 1000);
   }

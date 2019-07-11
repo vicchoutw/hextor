@@ -1,5 +1,5 @@
 const path = require('path');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+// const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -91,13 +91,13 @@ let baseConfig = {
       cleanFolderInit.target,
       cleanFolderInit.options
     ),
-    new CopyWebpackPlugin([
-      {
-        from: './resources/images/',
-        to: './images/',
-        force: true
-      }
-    ]),
+    // new CopyWebpackPlugin([
+    //   {
+    //     from: './resources/images/',
+    //     to: './images/',
+    //     force: true
+    //   }
+    // ]),
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',
       chunkFilename: '[id].css'

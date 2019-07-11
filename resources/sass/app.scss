@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:900');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  list-style-type: none;
+}
+
+body {
+  background: #211f2a;
+  width: 100%;
+  height: 100vh;
+
+  #app,
+  .wrapper {
+    width: 100%;
+    height: 100%;
+  
+    #mask {
+      display: none;
+      
+      z-index: 999;
+      position: fixed;
+      top: 0;
+      left: 0;
+      
+      width: 100%;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.95);
+      
+      #result {
+        overflow: auto;
+        position: relative;
+        padding: 20px 50px;
+        border: 1px solid #515A94;
+        width: 90%;
+        max-height: 80vh;
+        max-width: 800px;
+        word-break: break-word;
+        line-height: 26px;
+        min-height: 100px;
+        top: 50%;
+        left: 50%;
+        box-sizing: border-box;
+        transform: translateX(-50%) translateY(-50%);
+        
+        span {
+          display: inline-block;
+          background: #211f2a;
+          border-radius: 20px;
+          padding: 2px 15px;
+          color: #848cbf;
+          margin-bottom: 10px;
+        }
+        
+        #colorbar {
+          width: 100%;
+          height: 10px;
+          border: 1px solid #515A94;
+          margin-bottom: 30px;
+        }
+        
+        #close,
+        #copy {
+          cursor: pointer;
+          position: absolute;
+          top: -1px;
+          right: 0px;
+          display: block;
+          width: 40px;
+          height: 40px;
+          background: #515A94;
+          text-align: center;
+          line-height: 40px;
+          font-size: 24px;
+        }
+        
+        #copy {
+          font-size: 15px;
+          top: 41px;
+        }
+      }
+    }
+    
+    .base {
+      width: 100%;
+      max-width: 400px;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      padding: 40px 0;
+      
+      transform: translateX(-50%) translateY(-60%);
+       
+      
+      #config {
+        width: 90%;
+        margin: 0 auto;
+        padding: 10px 0;
+        border-bottom: 1px solid #515A94;
+        
+        span {
+          font-size: 20px;
+          width: 150px;
+          display: inline-block;
+          margin-bottom: 10px;
+          vertical-align: top;
+          color: #8F91B8;
+          text-shadow: 0px 2px 10px #1A1A21;
+        }
+        
+        input {
+          vertical-align: top;
+          display: inline-block;
+          width: 70px;
+          padding: 5px 10px;
+          text-align: center;
+          font-size: 20px;
+          height: 34px;
+          color: #333;
+          border: 1px solid #fff;
+          box-shadow: 0px 2px 10px #000;
+        }
+      }
+      
+      #inputer {
+        width: 100%;
+        margin-top: 35px;
+        .colorPicker {
+          width: 90%;
+          margin: 15px auto;
+    
+          span {
+            width: 60px; 
+            display: inline-block;
+            font-size: 24px;
+            padding-right: 10px;
+            color: #8F91B8;
+            text-shadow: 0px 2px 10px #1A1A21;
+          }
+    
+          input {
+            display: inline-block;
+            padding: 5px 10px;
+            font-size: 20px;
+            height: 30px;
+            border: 1px solid #fff;
+            box-shadow: 0px 2px 10px #000;
+          }
+        }
+      }
+    
+      #add {
+        cursor: pointer;
+        margin: 25px auto 0;
+        width: 90%;
+        padding: 10px 0;
+        color: #FCFFA6;
+        font-size: 18px;
+        text-align: center;
+        border: 1px solid #dfe1e5;
+        border-radius: 10px;
+        box-shadow: 0px 2px 10px #000;
+        background: linear-gradient(to top, #1B1A23, #2E2C3B);
+      }
+      
+      #generate {
+        cursor: pointer;
+        margin: 15px auto 0;
+        width: 90%;
+        padding: 20px 0;
+        color: #fff;
+        font-size: 22px;
+        text-align: center;
+        border: 1px solid #dfe1e5;
+        border-radius: 10px;
+        text-shadow: 0px 2px 10px #BABABA;
+        box-shadow: 0px 2px 10px #000;
+        background: linear-gradient(to top, #2A9149, #1FA373);
+        
+        &:after {
+          transition: none;
+          
+          display: block;
+          content: '';
+          width: 0%;
+          height: 4px;
+          background: #1FA373;
+          
+          border-radius: 15px;
+          transform: translateY(34px);
+        }
+        
+        &.active {
+          &:after {
+            transition: width 900ms ease;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+

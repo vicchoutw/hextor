@@ -4,9 +4,9 @@
   "description": "",
   "main": "electron.js",
   "scripts": {
-    "app": "electron .",
-    "pack": "electron-builder --dir",
-    "export": "electron-builder",
+    "app": "npm run build && electron .",
+    "pack": "npm run build && electron-builder --dir",
+    "export": "npm run build && electron-builder",
     "dev": "webpack-dev-server --devtool eval-source-map --progress --colors --inline --hot --mode=development",
     "build": "webpack --mode=production"
   },
@@ -28,6 +28,7 @@
     "babel-loader": "^8.0.2",
     "babel-plugin-add-module-exports": "^1.0.2",
     "clean-webpack-plugin": "^0.1.19",
+    "clipboard": "^2.0.4",
     "copy-webpack-plugin": "^4.5.2",
     "css-loader": "^1.0.0",
     "electron": "^5.0.6",
@@ -63,13 +64,13 @@
       "output": "build"
     },
     "mac": {
-      "icon": "icon.png"
+      "icon": "hextor.png"
     },
     "win": {
-      "icon": "icon.png"
+      "icon": "hextor.png"
     },
     "linux": {
-      "icon": "icon.png"
+      "icon": "hextor.png"
     }
   }
 }

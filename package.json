@@ -6,7 +6,10 @@
   "scripts": {
     "app": "npm run build && electron .",
     "pack": "npm run build && electron-builder --dir",
-    "export": "npm run build && electron-builder",
+    "export": "npm run build && electron-builder --win --mac",
+    "export-w": "npm run build && electron-builder --win",
+    "export-m": "npm run build && electron-builder --mac",
+    "export-l": "npm run build && electron-builder --linux",
     "dev": "webpack-dev-server --devtool eval-source-map --progress --colors --inline --hot --mode=development",
     "build": "webpack --mode=production"
   },
@@ -33,6 +36,7 @@
     "css-loader": "^1.0.0",
     "electron": "^5.0.6",
     "electron-builder": "^20.44.4",
+    "electron-packager": "^14.0.1",
     "eslint": "^5.6.0",
     "eslint-loader": "^2.1.1",
     "html-webpack-plugin": "^3.2.0",
@@ -61,7 +65,7 @@
     "appId": "com.cilent.app.electronbuild",
     "productName": "Hextor",
     "directories": {
-      "output": "build"
+      "output": "export"
     },
     "mac": {
       "icon": "hextor.png"

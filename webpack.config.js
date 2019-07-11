@@ -13,6 +13,7 @@ let initProject = {
 
 let cleanFolderInit = {
   target: [
+    'export',
     'build',
     'dist'
   ],

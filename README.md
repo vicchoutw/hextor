@@ -1,12 +1,18 @@
 # Hextor
 ![image](https://raw.githubusercontent.com/vicchoutw/hextor/master/logo/hextor_1x.png)
+
+</br>
+
 An application for generating tween between multiple colors which is developed by [webpack4](https://webpack.js.org/) + [React.js](https://reactjs.org/) + [Electron.js](https://electronjs.org/).
 
+</br>
 
 ### Demo
 ![image](https://raw.githubusercontent.com/vicchoutw/hextor/master/logo/hextor-demo.gif)
 
 [View on Codepen](https://codepen.io/vccodepen/full/XLjBQj)
+
+</br>
 
 ### Install
 Make sure node.js v8.x is installed.
@@ -19,7 +25,7 @@ Then install node_modules.
 ```javascript
   npm install
 ```
-
+</br>
 ### Usage
 ##### Web development
 ```javascript

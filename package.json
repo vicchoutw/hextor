@@ -1,5 +1,5 @@
 {
-  "name": "hex-tweenerator",
+  "name": "Hextor",
   "version": "1.0.0",
   "description": "",
   "main": "electron.js",
@@ -59,7 +59,7 @@
   },
   "build": {
     "appId": "com.cilent.app.electronbuild",
-    "productName": "Tweener",
+    "productName": "Hextor",
     "directories": {
       "output": "build"
     },
